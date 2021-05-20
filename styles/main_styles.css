@@ -114,7 +114,6 @@ ul {
 .main-button {
   background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
   transition: .3s ease;
-  margin-left: 50px;
   width: 183px;
 }
 
@@ -632,9 +631,35 @@ ul {
   border-radius: 50%;
   z-index: 9999999;
   border: 2px solid #b373fc;
-  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 0 rgba(209, 143, 220, 0.7);
+  animation: pulse 3s infinite;
   cursor: pointer;
   box-sizing: content-box;
+}
+
+.mobile div:hover {
+  animation: none;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(209, 143, 220, 0.7);
+  }
+  20% {
+    box-shadow: 0 0 0 3 rgba(209, 143, 220, 0);
+  }
+  40% {
+    box-shadow: 0 0 0 6 rgba(209, 143, 220, 0);
+  }
+  60% {
+    box-shadow: 0 0 0 9 rgba(209, 143, 220, 0);
+  }
+  80% {
+    box-shadow: 0 0 0 12px rgba(209, 143, 220, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(209, 143, 220, 0);
+  }
 }
 
 .mobile div span {
@@ -749,25 +774,18 @@ ul {
 @media screen and (max-width:1200px) {
 
   .container {
-    width: auto;
+    width: 960px;
   }
 
-  .main-menu {
-    display: none;
-  }
-
-  .main-wrap {
-    margin-left: 50px;
-    margin-right: 50px;
+  .menu-item {
+    padding-right: 35px;
   }
 
   .main-title {
     padding-top: 113px;
-    text-align: center;
   }
 
   .countdown-container {
-    justify-content: center;
     width: auto;
   }
 
@@ -781,7 +799,6 @@ ul {
 
   .main-screen__button {
     margin-right: 25px;
-    margin-left: 40px;
   }
 
   .main-screen__people {
@@ -837,16 +854,7 @@ ul {
     width: 481px;
   }
 
-  .start_header {
-    margin-left: 50px;
-  }
-
-  .start_info {
-    margin-left: 50px;
-  }
-
   .start__infographic {
-    margin-left: 50px;
     margin-top: 65px;
   }
 
@@ -868,13 +876,9 @@ ul {
     flex-wrap: wrap;
   }
 
-  .advantage-container {
-    display: block;
-  }
-
   .advantage {
     margin-right: 0;
-    margin-bottom: 80px;
+    width: 320px;
   }
 
   .advantage:nth-of-type(3) {
@@ -883,35 +887,18 @@ ul {
 
   .partners-container {
     width: auto;
-    margin-left: 50px;
   }
 
-  .partners-header {
-    justify-content: center;
-  }
-
-  .partners-wrap {
-    width: 940px;
-  }
-
-  .partners-logo:nth-of-type(2) {
-    border-right: none;
-  }
-
-  .partners-logo:nth-of-type(6) {
-    border-right: none;
+  .partners-logo {
+    width: 240px;
   }
 
   .teachers-container {
-    width: 865px;
-  }
-
-  .teachers-header {
-    justify-content: center;
+    width: auto;
   }
 
   .teachers-block {
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 
   .teacher-foto {
@@ -926,7 +913,7 @@ ul {
 @media screen and (max-width:992px) {
   
   .container {
-    width: 834px;
+    width: 720px;
   }
 
   h2 {
@@ -1012,6 +999,10 @@ ul {
 
   .container {
     width: auto;
+  }
+
+  .header .container {
+    margin: 0 25px;
   }
 
   p {
@@ -1124,6 +1115,7 @@ ul {
 
   .teacher-foto {
     margin: 0 auto;
+    margin-bottom: 20px;
   }
 
   .teacher-info {
@@ -1139,7 +1131,7 @@ ul {
 @media screen and (max-width:576px) {
   
   .container {
-    width: 350px;
+    width: 90%;
   }
 
   h2 {
@@ -1241,7 +1233,7 @@ ul {
   }
 
   .advantages-container {
-    width: 350px;
+    width: auto;
   } 
 
   .advantages {
@@ -1342,17 +1334,15 @@ ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-left: 25px;
-    margin-right: 25px;
     width: auto;
   }
 
   .input {
-    width: 285px;
+    width: 300px;
   }
 
   .btn-form {
-    left: 125px;
+    left: 142px;
   }
 
   .soc-icons {
@@ -1364,115 +1354,3 @@ ul {
   }  
 }
 
-@media screen and (max-width:320px) {
-  
-  .container {
-    width: 310px;
-  }
-
-  h2 {
-    font-size: 30px;
-  }
-
-  .header {
-    background-position: top;
-  }
-  
-  .main-wrap {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
-  .main-title {
-    font-size: 30px;
-  }
-
-  .main-button {
-    width: 170px;
-    margin-left: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .countdown-container {
-    flex-wrap: wrap;
-  }
-
-  .countdown:nth-child(4) {
-    display: none;
-  }
-
-  .last-line__wrap {
-    margin-left: 25px;
-    margin-right: 25px;
-  }
-
-  .last-line__wrap {
-    padding-bottom: 0px;
-  }
-
-  .total {
-    display: none;
-  }
-
-  .about {
-    margin-top: 100px;
-  } 
-
-  .about-wrap {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .CPU {
-    margin-right: 0px;
-    margin-left: 0px;
-  }
-
-  .CPU-info {
-    margin-top: 50px;
-    text-align: center;
-    width: 280px;
-  }
-
-  .advantages-wrap_title {
-    width: 290px;
-  }
-
-  .advantages-container {
-    width: 310px;
-  }
-
-  .partners-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .partners-wrap {
-    width: 250px;
-  }
-
-  .teachers-header {    
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .teachers-header img {
-    margin-right: 0;
-  }
-
-  .teachers-container {
-    padding-left: 0;
-    width: 315px;
-  }
-
-  .teachers-block {
-    width: 310px;
-  }
-
-  .footer-container {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
