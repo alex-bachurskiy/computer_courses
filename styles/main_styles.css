@@ -1200,6 +1200,8 @@ ul {
   }
 
   .countdown-container {
+    display: flex;
+    justify-content: center;
     margin: auto;
   }
 
