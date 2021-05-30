@@ -484,6 +484,7 @@ ul {
 .teachers-block {
   margin-top: 113px;
   display: flex;
+  justify-content: space-between;
 }
 
 .teacher-info {
@@ -492,7 +493,7 @@ ul {
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 416px;
+  width: 340px;
 }
 
 .teacher-foto {
